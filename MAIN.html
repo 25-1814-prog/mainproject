@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>반응형 와이어프레임</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+    }
+    header, footer {
+      text-align: center;
+      padding: 20px;
+    }
+    .box {
+      background: #ccc;
+      margin: 10px auto;
+    }
+    /* 기본 (Desktop) */
+    .profile { width: 100px; height: 150px; }
+    .info { display: flex; justify-content: center; align-items: center; gap: 15px; padding: 30px; }
+    .info .icon { width: 50px; height: 50px; background: #bbb; }
+    .info .text { display: flex; flex-direction: column; gap: 8px; }
+    .line { width: 200px; height: 12px; background: #ddd; border-radius: 6px; }
+
+    .cards { display: flex; justify-content: center; gap: 20px; }
+    .card { width: 120px; height: 180px; background: #ccc; }
+
+    .banner { width: 100%; height: 200px; background: #aaa; margin-top: 20px; }
+    .button { width: 300px; height: 40px; background: #ddd; margin: 20px auto; border-radius: 20px; }
+
+    /* Tablet */
+    @media (max-width: 992px) {
+      .cards { flex-wrap: wrap; }
+      .card { width: 45%; height: 200px; }
+      .profile { width: 80px; height: 120px; }
+      .banner { height: 150px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .info { flex-direction: column; align-items: center; }
+      .cards { flex-direction: column; align-items: center; }
+      .card { width: 80%; height: 180px; }
+      .profile { width: 60px; height: 90px; }
+      .banner { height: 120px; }
+      .button { width: 80%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="box profile"></div>
+  </header>
+
+  <section class="info">
+    <div class="icon"></div>
+    <div class="text">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </section>
+
+  <div class="banner"></div>
+
+  <footer>
+    <div class="button"></div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body {
+margin: 0;
+padding: 0;
+font-family: 'Noto Sans KR', sans-serif;
+background: #FFF;
+color: #333;
+}
+header {
+background-color: #f5f5f5;
+padding: 20px;
+text-align: center;
+}
+.hero {
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 60vh;
+background-color: #eee;
+}
+.hero img {
+max-width: 100%;
+height: auto;
+}
+.content {
+padding: 40px 20px;
+}
+.content h2 {
+margin-bottom: 20px;
+}
+.content p {
+line-height: 1.6;
+}
+footer {
+background-color: #222;
+color: #fff;
+text-align: center;
+padding: 20px;
+}
+.홍보{
+    width: 260px;
+    height: 399px;
+    flex-shrink: 0;
+    padding: 30px;
+}
