@@ -1,44 +1,115 @@
-body {
-margin: 0;
-padding: 0;
-font-family: 'Noto Sans KR', sans-serif;
-background: #FFF;
-color: #333;
+ /*상단바*/
+.top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between; /* 로고와 메뉴 양쪽 정렬 */
+      align-items: center;
+      padding: 0 30px;
+      height: 60px;
+      box-sizing: border-box;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    /* 메뉴 영역 */
+    nav {
+      display: flex;
+      gap: 20px; /* 메뉴 간격 */
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      white-space: nowrap; /* 줄바꿈 방지 */
+    }
+
+    /* 본문 */
+    .content {
+      margin-top: 40px;
+      padding: 60px;
+    }
+
+ /*  하단바 스타일 */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      height: 60px;
+      z-index: 1000;
+    }
+    /* 📱 화면이 작아졌을 때 (모바일/태블릿 대응) */
+    @media (max-width: 600px) {
+      nav {
+        gap: 10px;             /* 메뉴 간격 줄이기 */
+        flex-wrap: wrap;       /* 화면 좁아지면 줄바꿈 */
+        justify-content: flex-end;
+      }
+      .top-bar {
+        flex-direction: column; /* 위아래로 쌓이게 */
+        height: auto;
+        padding: 10px;
+        align-items: flex-start;
+      }
+    }
+    .bottom-bar a {
+        color: white;
+        text-decoration: none;
+    }
+    .img {
+  display: flex;          /* 이미지와 글 가로 배치 */
+  align-items: center;    /* 세로 가운데 정렬 */
+  gap: 20px;              /* 간격 */
+  margin-top: 80px;       /* 상단바와 간격 */
 }
-header {
-background-color: #f5f5f5;
-padding: 20px;
-text-align: center;
+
+.img img {
+  width: 300px;           /* 이미지 크기 */
+  height: 500px;
+  object-fit: cover;      /* 비율 유지하며 잘 맞게 */
+  border-radius: 10px;
 }
-.hero {
-display: flex;
-align-items: center;
-justify-content: center;
-min-height: 60vh;
-background-color: #eee;
+
+.text {
+  flex: 1;                /* 남은 공간 차지 */
 }
-.hero img {
-max-width: 100%;
-height: auto;
+
+.text li {
+  list-style: none;       /* li 앞 점 제거 */
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
 }
-.content {
-padding: 40px 20px;
-}
-.content h2 {
-margin-bottom: 20px;
-}
-.content p {
-line-height: 1.6;
-}
-footer {
-background-color: #222;
-color: #fff;
-text-align: center;
-padding: 20px;
-}
-.홍보{
-    width: 260px;
-    height: 399px;
-    flex-shrink: 0;
-    padding: 30px;
+
+/* 📱 반응형 (화면이 작을 때) */
+@media (max-width: 700px) {
+  .img {
+    flex-direction: column; /* 세로로 배치 */
+    text-align: center;
+  }
+
+  .img img {
+    width: 80%;
+    height: auto;
+  }
+
+  .text {
+    flex: none;
+  }
 }
