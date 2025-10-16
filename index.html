@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>반응형 상단바</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="./MAIN.CSS">
+  <link rel="stylesheet" href="./index.js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
   <!-- 상단바 -->
   <div class="top-bar">
     <div class="logo">GOGI LOVER</div>
     <nav>
-      <a href="#">About</a>
-      <a href="#">Works</a>
-      <a href="#">Collaboration</a>
-      <a href="#">Apply</a>
+      <a href="#">login</a>
+      <a href="#">sign up</a>
     </nav>
   </div>
   <div class="content">
@@ -31,23 +30,39 @@
       </div>
     </div>
   </div>
+  <h2 style="text-align:center;">가로로 배치된 이미지와 설명</h2>
 
-
-
-  <!-- 하단바 -->
-  <div class="bottom-bar">
-    <a href="#">이용약관</a>
-    <a href="#">개인정보처리방침</a>
-    <a href="#">고객센터</a>
-    <a href="#">회사소개</a>
-
+  <div class="image-row">
+    <div class="image-box">
+      <img src="./GOGILOVER.png" alt="그림 1">
+      <div class="caption">왼쪽 그림 설명입니다.</div>
+    </div>
+    <div class="image-box">
+      <img src="./GOGILOVER.png" alt="그림 2">
+      <div class="caption">가운데 그림 설명입니다.</div>
+    </div>
+    <div class="image-box">
+      <img src="./소심3.png" alt="그림 3">
+      <div class="caption">소심이.</div>
+    </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <h2 class="content">우리 GOGILOVER가 만든 프로젝트</h2>
+  <div class="image-row">
+    <div class="image-box">
+  <img src="./프로젝트1.jpeg" alt="프로젝트 그림1" width="1500" height="1000">
+  <div class="caption">1팀의 프로젝트</div>
+  </div>
+  <div class="image-box">
+  <img src="./프로젝트2.jpeg" alt="프로젝트 그림2"width="1500" height="1000">
+  <div class="caption">2팀의 프로젝트</div>
+  </div>
+  </div>
+  <!-- 하단바 -->
+<div class="footer-bar">
+  나는 하단바
+</div>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
-
