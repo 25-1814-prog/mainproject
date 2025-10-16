@@ -34,11 +34,11 @@
 
     /* 본문 */
     .content {
-      margin-top: 40px;
-      padding: 60px;
+       padding: 60px;
+       padding-bottom: 80px; /* footer 높이보다 살짝 여유롭게 */
     }
 
- /*  하단바 스타일 */
+ /*  하단바 스타일   */
     .bottom-bar {
       position: fixed;
       bottom: 0;
@@ -54,6 +54,7 @@
       height: 60px;
       z-index: 1000;
     }
+    
     /* 📱 화면이 작아졌을 때 (모바일/태블릿 대응) */
     @media (max-width: 600px) {
       nav {
@@ -87,7 +88,8 @@
 }
 
 .text {
-  flex: 1;                /* 남은 공간 차지 */
+  flex: 1;       
+  padding-bottom: 50px;         /* 남은 공간 차지 */
 }
 
 .text li {
@@ -112,4 +114,71 @@
   .text {
     flex: none;
   }
+}
+/* 하단바 */
+    .footer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      z-index: 1000;
+
+      /* 숨겨진 상태 */
+      opacity: 0;
+      transform: translateY(100%);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      pointer-events: none; /* 숨겨졌을 때 클릭 방지 */
+    }
+
+    /* 보여지는 상태 */
+    .footer-bar.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+.image-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .image-box {
+      text-align: center;
+      width: 200px;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    @media (max-width: 700px) {
+      .image-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-box {
+        width: 80%;
+      }
+    }
+body{
+  padding-bottom: 60px; /* footer-bar 높이만큼 추가 */
+}
+.com{
+  padding: 60px;
 }
